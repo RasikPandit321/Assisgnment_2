@@ -47,6 +47,17 @@ int main()
     }
 
     inputFile.close();  // close the file
+    #ifdef _DEBUG
+
+    // Print student information only when compiled in Debug mode
+    cout << "Student Information:" << endl;
+
+    for (const STUDENT_DATA& student : students)
+    {
+        cout << student.lastName << ", " << student.firstName << endl;
+    }
+
+    #endif 
 
     return 0;
 }
